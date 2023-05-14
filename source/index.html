@@ -9,6 +9,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -42,11 +43,11 @@
       <main class="page-main">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
         <div class="intro-banner">
-          <img src="img/main-logo-welcome.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+          <img class="intro-banner-logo" src="img/main-logo-welcome.svg" alt="Добро пожаловать в Седону" width="282" height="214">
         </div>
         <section class="advantages">
           <div class="advantages__text-wrapper">
-            <h2 class="advantages__title title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h2>
+            <h2 class="advantages__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p class="advantages__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
             </p>
           </div>
@@ -58,19 +59,28 @@
                 <p class="advantages-card__description description description--with-image">
                   СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
               </div>
-              <img class="advantages-card__image" src="img/photo-city-phone.jpg" alt="город Седона" width="320" height="260">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-city-desktop.webp 1x, img/photo-city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-city-tablet.webp 1x, img/photo-city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-city-phone.webp 1x, img/photo-city-phone@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+                <source media="(min-width: 780px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+                <img class="advantages-card__image" src="img/photo-city-phone.jpg" srcset="img/photo-city-phone@2x.jpg 2x" alt="город Седона" width="320" height="260">
+              </picture>
               <ul class="advantages-card__facilities facilities-list">
                 <li class="facilities-list__item facilities-card facilities-card--home">
                   <h4 class="facilities-card__title title title--left">Жилье</h4>
                   <p class="facilities-card__description description description--left">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </li>
                 <li class="facilities-list__item facilities-card facilities-card--food">
-                  <h4 class="facilities-card__title title--left">ЕДА</h4>
-                  <p class="facilities-card__description description--left">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                  <h4 class="facilities-card__title title title--left">Еда</h4>
+                  <p class="facilities-card__description description description--left">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
                 </li>
                 <li class="facilities-list__item facilities-card facilities-card--present">
-                  <h4 class="facilities-card__title title--left">СУВЕНИРЫ</h4>
-                  <p class="facilities-card__description description--left">Не только китайского, но и местного производства!</p>
+                  <h4 class="facilities-card__title title title--left">Сувениры</h4>
+                  <p class="facilities-card__description description description--left">Не только китайского, но и местного производства!
+                  </p>
                 </li>
               </ul>
             </li>
@@ -81,7 +91,11 @@
                 <p class="advantages-card__description description description--with-image">
                   Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="advantages-card__image" src="img/photo-bridge-phone.jpg" alt="город Седона" width="320" height="260">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 780px)" srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="advantages-card__image" src="img/photo-bridge-phone.jpg" srcset="img/photo-bridge-phone@2x.jpg 2x" alt="город Седона" width="320" height="260">
+              </picture>
             </li>
             <li class="advantages-list__item advantages-card">
               <div class="advantages-card__wrapper advantages-card__wrapper--gray">
@@ -114,7 +128,11 @@
         <section class="map">
           <h2 class="visually-hidden">Интерактивная карта.</h2>
           <div class="map__element">
-            <img class="map__image" src="img/map-phone.jpg" alt="карта" width="320" height="350">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 780px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="map__image" src="img/map-phone.jpg" srcset="img/map-phone@2x.jpg" alt="карта" width="320" height="350">
+            </picture>
           </div>
         </section>
       </main>

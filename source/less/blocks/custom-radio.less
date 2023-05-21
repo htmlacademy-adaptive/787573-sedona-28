@@ -1,8 +1,8 @@
-.custom-checkbox {
+.custom-radio {
   position: relative;
   display: inline-block;
   background: #f2f2f2;
-  border-radius: 4px;
+  border-radius: 50%;
   width: 46px;
   height: 46px;
   margin-right: 16px;
@@ -17,20 +17,19 @@
   }
 }
 
-.custom-checkbox::before {
+.custom-radio::before {
+  display: none;
   position: absolute;
   content: "";
-  display: inline-block;
-  width: 22px;
+  width: 16px;
   height: 16px;
-  background-image: url("../img/icons/check-mark.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: #333333;
+  border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-//.custom-checkbox::before {
-//  display: inline-block;
-//}
+.input-radio:checked + .custom-radio::before {
+  display: inline-block;
+}

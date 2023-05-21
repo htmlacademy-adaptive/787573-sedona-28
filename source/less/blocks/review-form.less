@@ -4,8 +4,7 @@
 }
 
 .review-form__block {
-  margin: 0;
-  margin-top: 24px;
+  margin: 24px 0 0 0;
 }
 
 .review-form__list-item {
@@ -14,11 +13,22 @@
   &--flex {
     flex-direction: column;
   }
+
+  &--radio {
+    width: 280px;
+  }
+
+  &--checkbox {
+    width: 224px;
+
+    @media (min-width: @desktop) {
+      width: 190px;
+    }
+  }
 }
 
 .review-form__title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .review-form__button {
@@ -86,5 +96,33 @@
         top: -15%;
       }
     }
+  }
+}
+
+.review-form__input {
+  background-color: #f2f2f2;
+  border: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    border: solid 4px #e5e5e5;
+    padding-left: 12px;
+  }
+}
+
+.review-form__submit-button {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop) {
+    width: 768px;
+    margin: 0 auto;
   }
 }

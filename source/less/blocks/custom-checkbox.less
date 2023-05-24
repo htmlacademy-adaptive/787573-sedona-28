@@ -19,7 +19,7 @@
 .custom-checkbox::before {
   position: absolute;
   content: "";
-  display: inline-block;
+  display: none;
   width: 22px;
   height: 16px;
   background-image: url("../img/icons/check-mark.svg");
@@ -30,6 +30,6 @@
   transform: translate(-50%, -50%);
 }
 
-//.custom-checkbox::before {
-//  display: inline-block;
-//}
+.input-checkbox:checked + .custom-checkbox::before {
+  display: inline-block;
+}

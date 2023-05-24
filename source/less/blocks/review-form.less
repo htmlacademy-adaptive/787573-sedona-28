@@ -50,7 +50,8 @@
 .review-form__input {
   color: #000000;
   background-color: #f2f2f2;
-  border: none;
+  border: solid 4px transparent;
+  resize: none;
 
   &:hover {
     background-color: #e5e5e5;
@@ -59,22 +60,22 @@
   &:active {
     background-color: #ffffff;
     border: solid 4px #e5e5e5;
-    padding-left: 12px;
+    //padding-left: 12px;
   }
 }
 
 .review-form__button {
   margin-bottom: 3px;
-  min-width: 279px;
+  max-width: 279px;
   padding: 16px 32px;
   font-family: "PT Sans", "Arial", sans-serif;
 
   @media (min-width: @tablet) {
-    min-width: 323px;
+    max-width: 324px;
   }
 
   @media (min-width: @desktop) {
-    min-width: 385px;
+    max-width: 385px;
   }
 }
 

@@ -11,11 +11,13 @@
   @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 60px;
+    padding: 0 40px;
+    margin-top: 46px;
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 }
 
@@ -28,6 +30,19 @@
     align-items: center;
     padding: 22px 20px 0;
     background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    top: 320px;
+  }
+}
+
+.photo-item__wrapper--small {
+  @media (min-width: @desktop) {
+    top: 188px;
   }
 }
 

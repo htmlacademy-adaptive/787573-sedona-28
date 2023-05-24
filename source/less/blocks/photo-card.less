@@ -1,5 +1,5 @@
 .photo-card {
-  padding: 25px 20px;
+  padding: 24px 0;
   border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet) {
@@ -9,6 +9,7 @@
 
   @media (min-width: @desktop) {
     padding: 0;
+    position: relative;
   }
 }
 
@@ -20,17 +21,30 @@
 
 .photo-card__title {
   align-self: flex-start;
-  margin: 0 0 15px;
+  margin: 0;
+
+  @media (min-width: @desktop) {
+    color: #ffffff;
+  }
 }
 
 .photo-card__author {
   align-self: flex-start;
-  margin: 0 0 11px 0;
+  margin: 0 0 15px 0;
+  text-transform: none;
+
+  @media (min-width: @desktop) {
+    color: #ffffff;
+  }
 }
 
 .photo-card__image {
   display: block;
   width: 100%;
+
+  @media (min-width: @tablet) {
+    height: 267px;
+  }
 }
 
 @media (min-width: @tablet) {

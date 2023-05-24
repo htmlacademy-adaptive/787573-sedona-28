@@ -7,7 +7,8 @@
     position: absolute;
     width: 40px;
     height: 37px;
-    left: 5%;
+    left: 0;
+    top: 0;
     background-image: url("../img/icons/icon-house.svg");
     background-repeat: no-repeat;
 
@@ -19,6 +20,10 @@
       top: 60px;
       background-image: url("../img/icons/icon-house-tablet.svg");
     }
+
+    @media (min-width: @desktop) {
+      top: 70px;
+    }
   }
 
   &--food .title::before {
@@ -26,7 +31,8 @@
     position: absolute;
     width: 40px;
     height: 37px;
-    left: 5%;
+    left: 0;
+    top: 0;
     background-image: url("../img/icons/icon-burger.svg");
     background-repeat: no-repeat;
 
@@ -38,6 +44,11 @@
       background-image: url("../img/icons/icon-burger-tablet.svg");
       top: 60px;
     }
+
+    @media (min-width: @desktop) {
+      left: 49%;
+      top: 73px;
+    }
   }
 
   &--present .title::before {
@@ -45,17 +56,23 @@
     position: absolute;
     width: 32px;
     height: 38px;
-    left: 5%;
+    left: 4px;
+    top: 0;
     background-image: url("../img/icons/icon-gift.svg");
     background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
       width: 70px;
       height: 75px;
-      left: 50%;
+      left: 51%;
       transform: translate(-50%, 0);
-      top: 60px;
+      top: 64px;
       background-image: url("../img/icons/icon-gift-tablet.svg");
+    }
+
+    @media (min-width: @desktop) {
+      top: 70px;
+      left: 49%;
     }
   }
 
@@ -64,12 +81,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 158px;
-    padding-bottom: 60px;
+    padding: 158px 33px 60px 33px;
   }
 
   @media (min-width: @desktop) {
     width: 400px;
+    padding: 169px 50px 69px 50px;
+  }
+}
+
+.facilities-card-br {
+  @media (max-width: @desktop) {
+    display: none;
+  }
+}
+
+.facilities-card--food {
+  @media (min-width: @tablet) {
+    padding: 158px 50px 60px 50px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 167px;
+  }
+}
+
+.facilities-card--present {
+  @media (min-width: @tablet) {
+    padding: 154px 36px 60px 36px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 170px;
   }
 }
 
@@ -80,7 +123,7 @@
   @media (min-width: @tablet) {
     max-width: 190px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 8px;
   }
 }
 
@@ -92,4 +135,14 @@
     max-width: 190px;
     text-align: center;
   }
+
+  @media (min-width: @desktop) {
+    max-width: 286px;
+  }
 }
+
+//.facilities-card__description--present {
+//  @media (min-width: @desktop) {
+//    max-width: 300px;
+//  }
+//}

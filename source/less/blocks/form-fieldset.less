@@ -1,7 +1,8 @@
 .form-fieldset {
   border: none;
   border-bottom: 1px solid #e5e5e5;
-  padding: 0 0 24px 0;
+  padding: 0;
+  width: 100%;
 
   @media (min-width: @tablet) {
     border-bottom: none;
@@ -9,5 +10,53 @@
 
   @media (min-width: @desktop) {
     padding-bottom: 56px;
+  }
+}
+
+.form-fieldset--data {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 11px;
+  }
+}
+
+.form-fieldset--contact {
+  padding-bottom: 17px;
+  margin-bottom: 0;
+}
+
+.form-fieldset--impress {
+  padding-bottom: 6px;
+  margin-bottom: 0;
+
+  @media (min-width: @mobile) {
+    margin-top: 30px;
+  }
+}
+
+.form-fieldset--lions {
+  padding-bottom: 5px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet) {
+    margin-top: 15px;
+  }
+}
+
+.form-fieldset--emotions {
+  margin-bottom: 10px;
+  padding: 20px;
+  border: none;
+
+  @media (min-width: @tablet) {
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop) {
+    width: 768px;
+    margin: 16px auto 36px;
   }
 }

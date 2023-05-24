@@ -42,7 +42,10 @@
     </header>
     <main class="main-container">
       <div class="main-container__banner sedona-banner">
-        <img src="img/short-logo-sedona.svg" alt="Седона" width="230" height="40">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/sedona-descktop.svg">
+          <img class="sedona-banner__image-catalog" src="img/short-logo-sedona.svg" width="229" height="39" alt="Sedona">
+        </picture>
       </div>
       <section class="review">
         <h1 class="review__title title title--biggest">Оставьте свой отзыв</h1>
@@ -50,27 +53,30 @@
           посещенных вами достопримечательностях</p>
         <form class="review__form review-form" action="https://echo.htmlacademy.ru/" method="get">
           <div class="review__form--wrapper">
-            <fieldset class="review-form__block form-fieldset">
+            <fieldset class="review-form__block form-fieldset form-fieldset--data">
               <legend class="review-form__title title title--bigger-tablet">Представьтесь:</legend>
               <ul class="review-form__list review-form-list">
+
                 <li class="review-form__list-item review-form__list-item--flex">
                   <label class="review-form__label label description description--left" for="name">ИМЯ*:</label>
-                  <input class="review-form__input input-text" type="text" id="name" name="name" placeholder="Пётр"
+                  <input class="review-form__input input-text" type="text" id="name" name="name" placeholder="" value="Пётр"
                         required>
                 </li>
+
                 <li class="review-form__list-item review-form__list-item--flex">
                   <label class="review-form__label label description description--left" for="surname">ФАМИЛИЯ*:</label>
-                  <input class="review-form__input input-text" type="text" id="surname" name="surname" placeholder="Пустота"
+                  <input class="review-form__input input-text" type="text" id="surname" name="surname" placeholder="" value="Пустота"
                         required>
                 </li>
+
                 <li class="review-form__list-item review-form__list-item--flex">
                   <label class="review-form__label label description description--left" for="noun">Отчество:</label>
                   <input class="review-form__input input-text" type="text" id="noun" name="noun"
-                        placeholder="Викторович" required>
+                        placeholder="" value="Викторович" required>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="review-form__block form-fieldset">
+            <fieldset class="review-form__block form-fieldset form-fieldset--contact">
               <legend class="review-form__title title title--bigger-tablet">Контактная информация:</legend>
               <ul class="review-form__list review-form-list">
                 <li class="review-form__list-item review-form__list-item--flex">
@@ -88,9 +94,9 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="review-form__block form-fieldset form-border-top">
+          <fieldset class="review-form__block form-fieldset form-fieldset--impress form-border-top">
             <legend class="review-form__title title title--bigger-tablet">Ваше Общее впечатление:</legend>
-            <ul class="review-form__list review-form-list">
+            <ul class="review-form__list review-form-list review-form-list--radio">
               <li class="review-form__list-item review-form__list-item--radio">
                 <label class="review-form__control">
                   <input class="review-form__input input-radio" type="radio" name="telephone" checked>
@@ -114,7 +120,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review-form__block form-fieldset  form-border-top">
+          <fieldset class="review-form__block form-fieldset form-fieldset--lions form-border-top">
             <legend class="review-form__title title title--bigger-tablet">Посещенные достопримечательности:</legend>
             <ul class="review-form__list review-form-list review-form-list--checkbox">
               <li class="review-form__list-item review-form__list-item--checkbox">
@@ -147,7 +153,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="review-form__block form-fieldset emotions-block emotion-block">
+          <fieldset class="review-form__block form-fieldset form-fieldset--emotions emotion-block">
             <legend class="review-form__title title title--bigger-tablet">Опишите свои эмоции:</legend>
             <label class="visually-hidden" for="story">Ваши впечатления:</label>
             <textarea class="review-form__input input-text input-text--emotions " id="story" name="story" rows="5" cols="33" placeholder="Опишите подробно все свои восторги"></textarea>
@@ -201,9 +207,9 @@
     </footer>
     <section class="modal modal--error">
       <div class="modal__container modal__container--error">
-        <h3 class="modal__title modal__title--error">Что-то пошло не так!
+        <h3 class="modal__title title modal__title--error ">Что-то пошло не так!
         </h3>
-        <p class="modal__caption modal__caption--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <p class="modal__caption modal__caption--error title">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <div class="modal__wrapper modal__wrapper--error">
           <button class="modal__confirm modal__confirm--error">Ок</button>
         </div>

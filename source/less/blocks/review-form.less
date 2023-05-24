@@ -4,7 +4,11 @@
 }
 
 .review-form__block {
-  margin: 24px 0 0 0;
+  margin: 24px 0;
+}
+
+.review-form__label {
+  padding-left: 10px;
 }
 
 .review-form__list-item {
@@ -12,10 +16,22 @@
 
   &--flex {
     flex-direction: column;
+
+    @media (min-width: @tablet) {
+      min-width: 296px;
+    }
+
+    @media (min-width: @desktop) {
+      min-width: 430px;
+    }
   }
 
   &--radio {
     width: 280px;
+
+    @media (min-width: @tablet) {
+      padding-left: 34px;
+    }
   }
 
   &--checkbox {
@@ -28,78 +44,11 @@
 }
 
 .review-form__title {
-  margin: 0 0 20px 0;
-}
-
-.review-form__button {
-  margin-bottom: 3px;
-}
-
-.review-form__tooltip {
-  margin-bottom: 22px;
-
-  @media (min-width: @tablet) {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: @tablet) {
-  .form-border-top {
-    position: relative;
-
-    .review-form__title {
-      width: 400px;
-      background-color: #ffffff;
-      position: relative;
-      z-index: 100;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: #dbdbdb;
-      height: 1px;
-      width: 648px;
-      top: -35%;
-      left: 50%;
-      transform: translate(-50%, 0);
-
-      @media (min-width: @desktop) {
-        width: 960px;
-        top: -18%;
-      }
-    }
-  }
-
-  .emotion-block {
-    position: relative;
-
-    .review-form__title {
-      width: 400px;
-      background-color: #ffffff;
-      position: relative;
-      z-index: 100;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: #dbdbdb;
-      height: 1px;
-      width: 648px;
-      top: -18%;
-      left: 50%;
-      transform: translate(-50%, 0);
-
-      @media (min-width: @desktop) {
-        width: 960px;
-        top: -15%;
-      }
-    }
-  }
+  width: 100%;
 }
 
 .review-form__input {
+  color: #000000;
   background-color: #f2f2f2;
   border: none;
 
@@ -114,11 +63,116 @@
   }
 }
 
+.review-form__button {
+  margin-bottom: 3px;
+  min-width: 279px;
+  padding: 16px 32px;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  @media (min-width: @tablet) {
+    min-width: 323px;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 385px;
+  }
+}
+
+.review-form__tooltip {
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .form-border-top {
+    position: relative;
+
+    .review-form__title {
+      background-color: #ffffff;
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #dbdbdb;
+      height: 1px;
+      width: 123px;
+      top: -26px;
+      left: 9%;
+      transform: translate(-50%, 0);
+
+      @media (min-width: @desktop) {
+        width: 285px;
+        top: -9%;
+        left: 15%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #dbdbdb;
+      height: 1px;
+      width: 123px;
+      top: -26px;
+      left: 90%;
+      transform: translate(-50%, 0);
+
+      @media (min-width: @desktop) {
+        width: 285px;
+        top: -9%;
+        left: 85%;
+      }
+    }
+  }
+
+  .emotion-block {
+    position: relative;
+
+    .review-form__title {
+      width: 400px;
+      background-color: #ffffff;
+      position: relative;
+      z-index: 100;
+      margin: 0 auto 25px auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #dbdbdb;
+      height: 1px;
+      width: 648px;
+      top: -26%;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      @media (min-width: @desktop) {
+        width: 960px;
+        top: -23%;
+      }
+    }
+  }
+}
+
 .review-form__submit-button {
+  padding: 20px;
+  text-align: end;
+
   @media (min-width: @tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 27px;
+    padding: 20px 0;
   }
 
   @media (min-width: @desktop) {

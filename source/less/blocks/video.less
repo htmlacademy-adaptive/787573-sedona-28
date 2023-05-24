@@ -6,23 +6,22 @@
   border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet) {
-    padding: 50px 60px 40px;
+    padding: 60px 60px 0;
     border-top: none;
   }
 }
 
 .video__title {
   margin: 0;
-  margin-bottom: 38px;
 }
 
 .video__description {
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 26px 0 0 0;
   max-width: 266px;
 
   @media (min-width: @tablet) {
     max-width: 445px;
+    margin-top: 30px;
   }
 }
 
@@ -37,6 +36,15 @@
 
 .video-preview {
   position: relative;
+  margin-top: 38px;
+
+  @media (min-width: @tablet) {
+    margin-top: 90px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 80px;
+  }
 }
 
 .video-preview-play {

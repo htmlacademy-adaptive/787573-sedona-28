@@ -1,12 +1,21 @@
 .main-footer {
   display: flex;
   flex-direction: column;
-  padding: 33px 82px;
+  padding: 42px 18px;
   gap: 30px;
   align-items: center;
 
   @media (min-width: @tablet) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 34px 60px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 34px 121px;
+  }
+}
+
+.main-footer__title {
+  margin: 0;
 }

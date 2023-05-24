@@ -42,7 +42,10 @@
     </header>
     <main class="main-container">
       <div class="main-container__banner sedona-banner">
-        <img src="img/short-logo-sedona.svg" alt="Седона" width="230" height="40">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/sedona-descktop.svg">
+          <img class="sedona-banner__image-catalog" src="img/short-logo-sedona.svg" width="229" height="39" alt="Sedona">
+        </picture>
       </div>
       <section class="photos">
         <h1 class="photos__title title title--biggest">Фото и видео</h1>
@@ -63,7 +66,11 @@
                 <p class="photo-card__author description description-nontransform">Автор фото: Борис</p>
               </div>
               <div class="photo-card__liked like-rating">
-                <img class="like-rating__image" src="img/thumb-up.svg" alt="лайк" width="23" height="21">
+                <button class="like-rating__button">
+                  <svg class="like-rating__icon" aria-hidden="true" focusable="false" width="22" height="20">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <span class="like-rating__value title title--smaller">1350</span>
               </div>
             </div>
@@ -76,13 +83,18 @@
                 <img class="photo-card__image" src="img/photo-flower-phone.jpg" srcset="img/photo-flower-phone@2x.jpg" alt="Местная растительность" width="280" height="280">
               </picture>
             </a>
-            <div class="photo-item__wrapper">
+            <div class="photo-item__wrapper photo-item__wrapper--small">
               <div class="photos-list__text-block">
                 <h3 class="photo-card__title title title--smaller">Местная растительность</h3>
                 <p class="photo-card__author description description-nontransform">Автор фото: Сергей</p>
               </div>
               <div class="photo-card__liked like-rating">
-                <button><img class="like-rating__image" src="img/thumb-up.svg" alt="лайк" width="23" height="21"></button><span class="like-rating__value title title--smaller">143</span>
+                <button class="like-rating__button">
+                  <svg class="like-rating__icon" aria-hidden="true" focusable="false" width="22" height="20">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
+                <span class="like-rating__value title title--smaller">143</span>
               </div>
             </div>
           </li>
@@ -94,13 +106,17 @@
                 <img class="photo-card__image" src="img/photo-mountain-phone.jpg" srcset="img/photo-mountain-phone@2x.jpg" alt="Дорога на север" width="280" height="280">
               </picture>
             </a>
-            <div class="photo-item__wrapper">
+            <div class="photo-item__wrapper photo-item__wrapper--small">
               <div class="photos-list__text-block">
                 <h3 class="photo-card__title title title--smaller">Дорога на север</h3>
                 <p class="photo-card__author description description-nontransform">Автор фото: Петр</p>
               </div>
               <div class="photo-card__liked like-rating">
-                <img class="like-rating__image" src="img/thumb-up.svg" alt="лайк" width="23" height="21">
+                <button class="like-rating__button">
+                  <svg class="like-rating__icon" aria-hidden="true" focusable="false" width="22" height="20">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <span class="like-rating__value title title--smaller">96</span>
               </div>
             </div>
@@ -113,13 +129,17 @@
                 <img class="photo-card__image" src="img/catalog-bridge.jpg" srcset="img/catalog-bridge@2x.jpg" alt="Мост дьявола" width="280" height="280">
               </picture>
             </a>
-            <div class="photo-item__wrapper">
+            <div class="photo-item__wrapper photo-item__wrapper--small">
               <div class="photos-list__text-block">
                 <h3 class="photo-card__title title title--smaller">Мост дьявола</h3>
                 <p class="photo-card__author description description-nontransform">Автор фото: Антон</p>
               </div>
               <div class="photo-card__liked like-rating">
-                <img class="like-rating__image" src="img/thumb-up.svg" alt="лайк" width="23" height="21">
+                <button class="like-rating__button">
+                  <svg class="like-rating__icon" aria-hidden="true" focusable="false" width="22" height="20">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <span class="like-rating__value title title--smaller">254</span>
               </div>
             </div>

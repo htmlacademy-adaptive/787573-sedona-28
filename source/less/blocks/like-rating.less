@@ -1,6 +1,33 @@
 .like-rating {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 15px;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+}
+
+.like-rating__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #ffffff;
+}
+
+.like-rating__value {
+  @media (min-width: @desktop) {
+    color: #ffffff;
+  }
+}
+
+.like-rating__icon {
+  --like-icon: rgba(0, 0, 0, 0.3);
+
+  @media (min-width: @desktop) {
+    --like-icon: #ffffff;
+  }
 }

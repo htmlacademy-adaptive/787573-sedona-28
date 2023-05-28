@@ -39,31 +39,3 @@
     margin: 32px auto;
   }
 }
-
-.review__form--wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: @tablet) {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 58px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 1px;
-      height: 338px;
-      background-color: #dbdbdb;
-      left: 50%;
-      transform: translate(-50%, 0);
-    }
-  }
-
-  @media (min-width: @desktop) {
-    gap: 100px;
-  }
-}

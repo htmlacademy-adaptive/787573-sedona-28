@@ -47,8 +47,5 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module",
-  "dependencies": {
-    "gulp-dart-sass": "^1.1.0"
-  }
+  "type": "module"
 }
